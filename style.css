@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f5f5f5;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 15px;
+  color: #333;
+}
+
+.controls {
+  margin: 15px 0;
+}
+
+.compare-container {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 60vh;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* default setengah */
+  height: 100%;
+  overflow: hidden;
+}
+
+#divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1.5px;          /* 🔹 garis lebih tipis */
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* 🔹 putih transparan */
+  cursor: ew-resize;
+  z-index: 5;
+  border: none;          /* 🔹 hilangkan garis hitam */
+  transition: background 0.2s ease;
+}
+
+#divider:hover {
+  background: rgba(255, 255, 255, 1); /* sedikit lebih terang pas dihover */
+}
+
+
+button {
+  margin: 10px 5px;
+  padding: 10px 18px;
+  font-size: 15px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+#clearBtn {
+  background-color: #e53935;
+}
+
+#clearBtn:hover {
+  background-color: #c62828;
+}
+/* 🔹 Label teks Before & After */
+.label {
+  position: absolute;
+  top: 8px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.before-label {
+  right: 10px;   /* 🔸 Sekarang "Before" di kanan */
+}
+
+.after-label {
+  left: 10px;    /* 🔸 Sekarang "After" di kiri */
+}
